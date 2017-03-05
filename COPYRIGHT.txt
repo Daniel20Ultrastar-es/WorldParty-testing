@@ -1,15 +1,25 @@
-Ultrastar Deluxe
-Copyright (C) 2011-2016 by the following:
+Ultrastar Deluxe WorldParty
+Copyright (C) 2010-2017 by the following:
 
 If you have contributed to this project then you deserve to be on this
-list.  Contact us (see: AUTHORS) and we'll add you.
+list.  Contact us and we'll add you.
 
+"Zup3r_vock"
 "Daniel20"
-"zup3r_vock"
-Stefan Ludowicy "basisbit"
 
 
-Based on UltraStar Deluxe Developped by:
+ --> Follow the project at https://github.com/ultrastares/usdxworldparty
+
+ --> Support and contact: http://ultrastar-es.org
+
+---------------------------------------------------------------------------------
+*Consider that Ultrastar Deluxe Worldparty is a fork of Ultrastar Deluxe.
+Some modifications could be related to their team which is impossible to merge
+with our project. So, please visit their repo to follow all modifications and 
+the people who are involved. https://github.com/UltraStar-Deluxe/USDX/commits/master
+---------------------------------------------------------------------------------
+
+Based on UltraStar Deluxe written by:
 
 Jay Binks "jaybinks"
 Dirk Dunger "blindy"
@@ -21,7 +31,8 @@ Tobias Gunkel "tobigun"
 Alexander S. "s_alexander"
 Karl-Michael Schindler "mischi"
 Philipp Steinhardt "whiteshark"
-
+Stefan Ludowicy "basisbit"
+"RattleSN4K3"
 
 Based on UltraStar written by:
 "Corvus5"
@@ -36,3 +47,4 @@ Benedikt Krueger
 Holger Kuhn "hawkear"
 Florian Küpper "flokuep"
 Wesley Stessens "profoX"
+various other people, see commit log from github.com/UltraStar-Deluxe/USDX and github.com/UltraStar-Deluxe/mirror

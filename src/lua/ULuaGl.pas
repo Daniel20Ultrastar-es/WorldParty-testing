@@ -1,26 +1,23 @@
-{* UltraStar Deluxe - Karaoke Game
- *
- * UltraStar Deluxe is the legal property of its developers, whose names
- * are too numerous to list here. Please refer to the COPYRIGHT
- * file distributed with this source distribution.
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; see the file COPYING. If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301, USA.
- *
- * $URL$
- * $Id$
+{*
+    UltraStar Deluxe WorldParty - Karaoke Game
+	
+	UltraStar Deluxe WorldParty is the legal property of its developers, 
+	whose names	are too numerous to list here. Please refer to the 
+	COPYRIGHT file distributed with this source distribution.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. Check "LICENSE" file. If not, see 
+	<http://www.gnu.org/licenses/>.
  *}
 
 unit ULuaGl;
@@ -35,7 +32,7 @@ interface
 
 uses
   SysUtils,
-  gl,
+  dglOpenGL,
   ULua;
 
 function luaopen_gl (L: Plua_State): Integer; cdecl;
@@ -885,7 +882,7 @@ end;
 
   const
   ULuaGl_Enum: array [0..579] of TULuaGl_Enums = (
-    (Text:'GL_VERSION_1_1';Value:GL_VERSION_1_1),
+    (Text:'GL_ACCUM';Value:GL_ACCUM),//(Text:'GL_VERSION_1_1';Value:GL_VERSION_1_1),
     (Text:'GL_ACCUM';Value:GL_ACCUM),
     (Text:'GL_LOAD';Value:GL_LOAD),
     (Text:'GL_RETURN';Value:GL_RETURN),
@@ -941,8 +938,8 @@ end;
     (Text:'GL_DST_COLOR';Value:GL_DST_COLOR),
     (Text:'GL_ONE_MINUS_DST_COLOR';Value:GL_ONE_MINUS_DST_COLOR),
     (Text:'GL_SRC_ALPHA_SATURATE';Value:GL_SRC_ALPHA_SATURATE),
-    (Text:'GL_TRUE';Value:GL_TRUE),
-    (Text:'GL_FALSE';Value:GL_FALSE),
+    (Text:'GL_CLIP_PLANE0';Value:GL_CLIP_PLANE0),//(Text:'GL_TRUE';Value:GL_TRUE),
+    (Text:'GL_CLIP_PLANE0';Value:GL_CLIP_PLANE0),//(Text:'GL_FALSE';Value:GL_FALSE),
     (Text:'GL_CLIP_PLANE0';Value:GL_CLIP_PLANE0),
     (Text:'GL_CLIP_PLANE1';Value:GL_CLIP_PLANE1),
     (Text:'GL_CLIP_PLANE2';Value:GL_CLIP_PLANE2),
@@ -1412,10 +1409,10 @@ end;
     (Text:'GL_T2F_N3F_V3F';Value:GL_T2F_N3F_V3F),
     (Text:'GL_T2F_C4F_N3F_V3F';Value:GL_T2F_C4F_N3F_V3F),
     (Text:'GL_T4F_C4F_N3F_V4F';Value:GL_T4F_C4F_N3F_V4F),
-    (Text:'GL_EXT_vertex_array';Value:GL_EXT_vertex_array),
-    (Text:'GL_WIN_swap_hint';Value:GL_WIN_swap_hint),
-    (Text:'GL_EXT_bgra';Value:GL_EXT_bgra),
-    (Text:'GL_EXT_paletted_texture';Value:GL_EXT_paletted_texture),
+    (Text:'GL_VERTEX_ARRAY_EXT';Value:GL_VERTEX_ARRAY_EXT),//(Text:'GL_EXT_vertex_array';Value:GL_EXT_vertex_arra),
+    (Text:'GL_VERTEX_ARRAY_EXT';Value:GL_VERTEX_ARRAY_EXT),//(Text:'GL_WIN_swap_hint';Value:GL_WIN_swap_hint),
+    (Text:'GL_VERTEX_ARRAY_EXT';Value:GL_VERTEX_ARRAY_EXT),//(Text:'GL_EXT_bgra';Value:GL_EXT_bgra),
+    (Text:'GL_VERTEX_ARRAY_EXT';Value:GL_VERTEX_ARRAY_EXT),//(Text:'GL_EXT_paletted_texture';Value:GL_EXT_paletted_texture),
     (Text:'GL_VERTEX_ARRAY_EXT';Value:GL_VERTEX_ARRAY_EXT),
     (Text:'GL_NORMAL_ARRAY_EXT';Value:GL_NORMAL_ARRAY_EXT),
     (Text:'GL_COLOR_ARRAY_EXT';Value:GL_COLOR_ARRAY_EXT),
@@ -1448,7 +1445,7 @@ end;
     (Text:'GL_INDEX_ARRAY_POINTER_EXT';Value:GL_INDEX_ARRAY_POINTER_EXT),
     (Text:'GL_TEXTURE_COORD_ARRAY_POINTER_EXT';Value:GL_TEXTURE_COORD_ARRAY_POINTER_EXT),
     (Text:'GL_EDGE_FLAG_ARRAY_POINTER_EXT';Value:GL_EDGE_FLAG_ARRAY_POINTER_EXT),
-    (Text:'GL_DOUBLE_EXT';Value:GL_DOUBLE_EXT),
+    (Text:'GL_BGR_EXT';Value:GL_BGR_EXT),//(Text:'GL_DOUBLE_EXT';Value:GL_DOUBLE_EXT),
     (Text:'GL_BGR_EXT';Value:GL_BGR_EXT),
     (Text:'GL_BGRA_EXT';Value:GL_BGRA_EXT),
     (Text:'GL_COLOR_TABLE_FORMAT_EXT';Value:GL_COLOR_TABLE_FORMAT_EXT),
