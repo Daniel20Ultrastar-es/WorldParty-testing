@@ -1,0 +1,13 @@
+
+name: usdxworldpartyTesting
+version: '17.10' 
+summary: Karaoke game inspired in Singstar
+description: UltraStar Deluxe WorldParty is a free and open source karaoke game. It allows up to six players to sing along with music using microphones in order to score points, depending on the pitch of the voice and the rhythm of singing.
+
+grade: candidate
+confinement: 
+
+parts:
+  my-part:
+
+    plugin: nil
