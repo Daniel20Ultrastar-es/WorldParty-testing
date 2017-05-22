@@ -1,14 +1,28 @@
-"sudo": required,
-"before_install": ["tools/travis/before_install.sh"],
-"install": ["tools/travis/install.sh"],
-"cache": 
-  {
-    "bundler": false,
-    "directories": ["dists/linux/prefix"]
-  },
-"global_env": "WINEPREFIX=~/.winelaz DISPLAY=:99.0",
-"language": "ruby",
-"group": "stable",
-"dist": "precise",
-"env": "LAZ_VER=1.6 LAZ_ENV=wine WINEARCH=win32 LAZ_OPT=\"--os=win32 --cpu=i386\"",
-"os": "linux"
+sudo: required
+
+matrix:
+  include:
+    - os: linux
+      env: LAZ_VER=1.6 LAZ_ENV=wine WINEARCH=win32 LAZ_OPT="--os=win32 --cpu=i386"
+    - os: linux
+      dist: trusty
+    - os: osx
+
+env:
+  global:
+    - WINEPREFIX=~/.winelaz
+    - DISPLAY=:99.0
+
+before_install:
+  - tools/travis/before_install.sh
+
+install:
+  - tools/travis/install.sh
+
+script:
+  - tools/travis/build.sh
+
+cache:
+  bundler: false
+  directories:
+- dists/linux/prefix
