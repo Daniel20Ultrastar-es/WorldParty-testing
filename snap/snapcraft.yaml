@@ -1,13 +1,45 @@
 
-name: usdxworldpartyTesting
-version: '17.10' 
-summary: Karaoke game inspired in Singstar
-description: UltraStar Deluxe WorldParty is a free and open source karaoke game. It allows up to six players to sing along with music using microphones in order to score points, depending on the pitch of the voice and the rhythm of singing.
+name: usdxworldpartytesting
+version: "17.3RC1"
+summary: UltraStar Deluxe WorldParty
+description: |
+  UltraStar Deluxe WorldParty is a free and open source karaoke game. 
+  It allows up to six players to sing along with music using microphones in order to score points, 
+  depending on the pitch of the voice and the rhythm of singing.
+  UltraStar Deluxe WorldParty is a fork of the original UltraStar deluxe 1.1
+  We added new features such as new selection song, avatars, themes, 
+  skins, font, improved camera and mouse support, thousands of new options 
+  come with this new version. Check it out!
+    ----------------- 
+    Official Website: https://ultrastar-es.org 
+    -----------------
+grade: devel 
+confinement: strict 
+icon: ./game/resources/icons/WorldParty.png
 
-grade: candidate
-confinement: 
+apps: 
+  worldparty: 
+    command: bin/WorldParty
+    plugs: [network, pulseaudio, opengl]
 
-parts:
-  my-part:
-
-    plugin: nil
+parts: 
+    worldparty: 
+        source: https://github.com/Daniel20Ultrastar-es/WorldParty-testing.git
+        source-type: git
+        plugin: autotools
+      
+        build-packages: 
+            - git
+            - automake
+            - gcc           
+            - fpc
+            - make           
+            - libsdl2-image-dev         
+            - libaformat-dev
+            - libswscale-dev
+            - libsqlite3-dev
+            - libpcre3-dev
+            - portaudio19-dev
+            - liblua5.3-dev
+            - libopencv-highgui-dev
+            - libfreetype6-dev
