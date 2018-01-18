@@ -15,7 +15,7 @@ skins, font, improved camera and mouse support, thousands of new options
 come with this new version. Check it out!
 
 ----------------- 
-Official Website:  http://ultrastar-es.org 
+Official Website:  https://ultrastar-es.org 
 -----------------
 
 ## Documentation
