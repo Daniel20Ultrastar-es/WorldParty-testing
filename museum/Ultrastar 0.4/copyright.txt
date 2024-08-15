@@ -1,0 +1,6 @@
+Copyright:
+
+All rights belongs to Corvus5,
+
+The only reason the code is hosted here is to preserve a copy of the original code which you can visit here:
+https://sourceforge.net/projects/ultrastar/
